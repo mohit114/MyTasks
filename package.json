@@ -1,0 +1,31 @@
+{
+  "name": "mytasks",
+  "version": "1.0.0",
+  "description": "a web application to note daily task list",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "mohit",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.17.1",
+    "connect-flash": "*",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "*",
+    "express": "~4.15.2",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "node-datetime": "^1.0.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "serve-favicon": "~2.4.2"
+  }
+}

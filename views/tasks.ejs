@@ -1,0 +1,36 @@
+<% include partials/head %>
+  <body>
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="text-center">
+        <span><strong>Welcome, <i><u> <%= user.email %></u></i> <br/>  you have successfully logged in.</span><br>
+        <h1 class=" fa fa-user"> Tasks List</h1><br>
+        <span style="float:right; margin-bottom:20px" class="fa fa-sign-out"><a href="/logout"> Sign out</a></span>
+        <a href="tasks/add" style="float:left; font-size:20px"><strong>Add new task</strong></a>
+        <div class="text-left">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Date Created</th>
+                <th>Date Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i=0; i<taskList.length; i++) { %>
+                 <tr>
+                   <td><%=taskList[i].taskName%></td>
+                   <td><%=taskList[i].description%></td>
+                   <td><%=taskList[i].createdDate%></td>
+                   <td><%=taskList[i].modifiedDate%></td>
+                   <td><a class="btn btn-button" href="tasks/edit/<%=taskList[i]._id%>">Edit</a></td>
+                   <td><a class="btn btn-button" href="tasks/delete/<%=taskList[i]._id%>">Delete</a></td>
+                 </tr>
+             <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

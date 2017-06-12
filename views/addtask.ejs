@@ -1,0 +1,23 @@
+<% include partials/head %>
+
+<body>
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="jumbotron">
+      <form action="/tasks/add" method="post">
+        <div class="form-group">
+          <%- messages() %>
+            <label>Task Name</label>
+            <input type="text" class="form-control" required name="taskName">
+        </div>
+        <div class="form-group">
+          <label>Task Description</label>
+          <textarea name="description" class="form-control" rows="5"></textarea>
+        </div>
+        <div>
+          <input type="submit" class="form-control" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

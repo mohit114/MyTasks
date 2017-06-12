@@ -1,0 +1,16 @@
+<% include partials/head %>
+
+<body>
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="jumbotron text-center">
+      <h1>Task Management System</h1>
+      <p class="lead">A simple daily task management system</p>
+      <% if(user == null){ %>
+      <a href="/login" class="btn btn-default"><span class="fa fa-sign-in"></span> Login</a>
+        <% } %>
+        <% if(user != null){ %>
+        <a href="/tasks" class="btn btn-default"><span class="fa fa-sign-in"></span> Tasks</a>
+          <% } %>
+      <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Signup</a>
+</body>
+</html>
