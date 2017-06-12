@@ -1,5 +1,5 @@
 var LocalStrategy = require('passport-local').Strategy;
-var bcrypt   = require('bcrypt-nodejs');
+var bcrypt = require('bcryptjs');
 var mongoClient = require('./db');
 
 module.exports = function(passport) {
@@ -62,7 +62,8 @@ module.exports = function(passport) {
 };
 
 function EncryptPassword (password) {
-  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+  var salt = bcrypt.genSaltSync(10);
+  return bcrypt.hashSync(password, salt);
 };
 
 function isValidPassword (userPassword, dbPassword) {
